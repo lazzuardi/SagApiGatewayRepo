@@ -1,0 +1,17 @@
+{
+  "id" : "f5bdc7b5-cc89-468b-89fc-e4327bda5b0a",
+  "names" : [ {
+    "value" : "Straight Through Routing",
+    "locale" : "en"
+  } ],
+  "descriptions" : [ {
+    "value" : "",
+    "locale" : "English"
+  } ],
+  "templateKey" : "straightThroughRouting",
+  "parameters" : [ {
+    "templateKey" : "endpointUri",
+    "values" : [ "http://demo4590421.mockable.io/customer/123/${sys:resource_path}" ]
+  } ],
+  "active" : false
+}

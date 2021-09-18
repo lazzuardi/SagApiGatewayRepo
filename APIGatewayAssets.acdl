@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<asset_composite name="APIGatewayAssets" displayName="Assets for API Gateway" runtimeVersion="10.7" targetNamespace="http://namespaces.softwareag.com/webMethods/APIGateway" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
+    <buildInfo name="BuildTimestamp" value="2021-09-18T11:55:13"/>
+    <asset name="AccessProfile.Administrators" displayName="Administrators" isDeployable="true">
+        <implementation.generic type="AccessProfile"/>
+        <dependsOn>APIGateway:Group.API-Gateway-Administrators</dependsOn>
+        <dependsOn>APIGateway:Group.Administrators</dependsOn>
+    </asset>
+    <asset name="Group.Administrators" displayName="Administrators" isDeployable="true">
+        <implementation.generic type="Group"/>
+        <dependsOn>APIGateway:User.Administrator</dependsOn>
+    </asset>
+    <asset name="User.Administrator" displayName="Administrator" isDeployable="true">
+        <implementation.generic type="User"/>
+    </asset>
+    <asset name="Group.API-Gateway-Administrators" displayName="API-Gateway-Administrators" isDeployable="true">
+        <implementation.generic type="Group"/>
+    </asset>
+    <asset name="UrlAlias.health" displayName="health" isDeployable="true">
+        <implementation.generic type="UrlAlias"/>
+    </asset>
+    <asset name="PolicyAction.c44e3516-f895-4324-9bff-525e79139d98" displayName="Policy Action [Enable HTTP / HTTPS] -&gt; Policy For API devops-api[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="AdministratorSetting.cache" displayName="cache" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="AdministratorSetting.logConfig" displayName="logConfig" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="PolicyAction.GlobalLogInvocationPolicyAction" displayName="Policy Action [Log Invocation] -&gt; Transaction logging" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="AdministratorSetting.mobileApp" displayName="mobileApp" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="Keystore.DEFAULT_IS_KEYSTORE" displayName="DEFAULT_IS_KEYSTORE" isDeployable="true">
+        <implementation.generic type="Keystore"/>
+        <dependsOn>APIGateway:PassmanData.wm.security.keystore.DEFAULT_IS_KEYSTORE</dependsOn>
+        <dependsOn>APIGateway:PassmanData.wm.security.keystore.DEFAULT_IS_KEYSTORE.ssos</dependsOn>
+    </asset>
+    <asset name="PassmanData.wm.security.keystore.DEFAULT_IS_KEYSTORE" displayName="wm.security.keystore.DEFAULT_IS_KEYSTORE" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="PassmanData.wm.security.keystore.DEFAULT_IS_KEYSTORE.ssos" displayName="wm.security.keystore.DEFAULT_IS_KEYSTORE.ssos" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="Group.API-Gateway-Providers" displayName="API-Gateway-Providers" isDeployable="true">
+        <implementation.generic type="Group"/>
+    </asset>
+    <asset name="Alias.PingFederate" displayName="PingFederate" isDeployable="true">
+        <implementation.generic type="Alias"/>
+    </asset>
+    <asset name="Policy.8065c2a5-88cb-4a33-ac17-4db2bdadc9b8" displayName="Policy For API devops-api[1.0]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.c44e3516-f895-4324-9bff-525e79139d98</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.f5bdc7b5-cc89-468b-89fc-e4327bda5b0a</dependsOn>
+    </asset>
+    <asset name="PolicyAction.f5bdc7b5-cc89-468b-89fc-e4327bda5b0a" displayName="Policy Action [Straight Through Routing] -&gt; Policy For API devops-api[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="Alias.OKTA" displayName="OKTA" isDeployable="true">
+        <implementation.generic type="Alias"/>
+    </asset>
+    <asset name="AccessProfile.API-Gateway-Providers" displayName="API-Gateway-Providers" isDeployable="true">
+        <implementation.generic type="AccessProfile"/>
+    </asset>
+    <asset name="AccessControlList.efdf2fab-fb77-454a-a83a-b74b4044fe27" displayName="AccessControlList for asset : devops-api" isDeployable="true">
+        <implementation.generic type="AccessControlList"/>
+        <dependsOn>APIGateway:AccessProfile.Administrators</dependsOn>
+        <dependsOn>APIGateway:AccessProfile.Default</dependsOn>
+    </asset>
+    <asset name="AccessProfile.Default" displayName="Default" isDeployable="true">
+        <implementation.generic type="AccessProfile"/>
+    </asset>
+    <asset name="Alias.ServiceConsulDefault" displayName="ServiceConsulDefault" isDeployable="true">
+        <implementation.generic type="Alias"/>
+    </asset>
+    <asset name="JndiProviderAlias.DEFAULT_IS_JNDI_PROVIDER" displayName="DEFAULT_IS_JNDI_PROVIDER" isDeployable="true">
+        <implementation.generic type="JndiProviderAlias"/>
+    </asset>
+    <asset name="KerberosSettings.kerberosSettings" displayName="KerberosSettings" isDeployable="true">
+        <implementation.generic type="KerberosSettings"/>
+    </asset>
+    <asset name="JmsConnectionAlias.DEFAULT_IS_JMS_CONNECTION" displayName="DEFAULT_IS_JMS_CONNECTION" isDeployable="true">
+        <implementation.generic type="JmsConnectionAlias"/>
+        <dependsOn>APIGateway:JndiProviderAlias.DEFAULT_IS_JNDI_PROVIDER</dependsOn>
+    </asset>
+    <asset name="Alias.EurekaDefault" displayName="EurekaDefault" isDeployable="true">
+        <implementation.generic type="Alias"/>
+    </asset>
+    <asset name="Policy.GlobalLogInvocationPolicy" displayName="Transaction logging[Global Policy]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.GlobalLogInvocationPolicyAction</dependsOn>
+    </asset>
+    <asset name="AdministratorSetting.HTTPListener@5555" displayName="HTTPListener@5555" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="UrlAlias.metrics" displayName="metrics" isDeployable="true">
+        <implementation.generic type="UrlAlias"/>
+    </asset>
+    <asset name="ProxyBypass.proxyBypass" displayName="proxyBypass" isDeployable="true">
+        <implementation.generic type="ProxyBypass"/>
+    </asset>
+    <asset name="Group.Everybody" displayName="Everybody" isDeployable="true">
+        <implementation.generic type="Group"/>
+    </asset>
+    <asset name="AdministratorSetting.HTTPListener@9999" displayName="HTTPListener@9999" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="Alias.local" displayName="local" isDeployable="true">
+        <implementation.generic type="Alias"/>
+    </asset>
+    <asset name="Truststore.DEFAULT_JVM_TRUSTSTORE" displayName="DEFAULT_JVM_TRUSTSTORE" isDeployable="true">
+        <implementation.generic type="Truststore"/>
+        <dependsOn>APIGateway:PassmanData.wm.security.keystore.DEFAULT_JVM_TRUSTSTORE</dependsOn>
+    </asset>
+    <asset name="PassmanData.wm.security.keystore.DEFAULT_JVM_TRUSTSTORE" displayName="wm.security.keystore.DEFAULT_JVM_TRUSTSTORE" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="AdministratorSetting.HTTPSListener@5543" displayName="HTTPSListener@5543" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+        <dependsOn>APIGateway:Keystore.DEFAULT_IS_KEYSTORE</dependsOn>
+        <dependsOn>APIGateway:Truststore.DEFAULT_IS_TRUSTSTORE</dependsOn>
+    </asset>
+    <asset name="Truststore.DEFAULT_IS_TRUSTSTORE" displayName="DEFAULT_IS_TRUSTSTORE" isDeployable="true">
+        <implementation.generic type="Truststore"/>
+        <dependsOn>APIGateway:PassmanData.wm.security.keystore.DEFAULT_IS_TRUSTSTORE</dependsOn>
+    </asset>
+    <asset name="PassmanData.wm.security.keystore.DEFAULT_IS_TRUSTSTORE" displayName="wm.security.keystore.DEFAULT_IS_TRUSTSTORE" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="API.553cf8d9-f956-4f8c-81a0-d2ef2e5089eb" displayName="devops-api[1.0]" isDeployable="true">
+        <implementation.generic type="API"/>
+        <dependsOn>APIGateway:Policy.8065c2a5-88cb-4a33-ac17-4db2bdadc9b8</dependsOn>
+        <dependsOn>APIGateway:RegisteredApplication.EmptyRegisteredApplication</dependsOn>
+    </asset>
+    <asset name="RegisteredApplication.EmptyRegisteredApplication" displayName="RegisteredApplication [ EmptyRegisteredApplication ]" isDeployable="true">
+        <implementation.generic type="RegisteredApplication"/>
+    </asset>
+    <asset name="AdministratorSetting.dataspace" displayName="dataspace" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="AdministratorSetting.HTTPGlobalIPAccessMode" displayName="HTTPGlobalIPAccessMode" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="AdministratorSetting.whiteListingIPs" displayName="whiteListingIPs" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="JmsConnectionAlias.PE_NONTRANSACTIONAL_ALIAS" displayName="PE_NONTRANSACTIONAL_ALIAS" isDeployable="true">
+        <implementation.generic type="JmsConnectionAlias"/>
+        <dependsOn>APIGateway:JndiProviderAlias.DEFAULT_IS_JNDI_PROVIDER</dependsOn>
+    </asset>
+</asset_composite>

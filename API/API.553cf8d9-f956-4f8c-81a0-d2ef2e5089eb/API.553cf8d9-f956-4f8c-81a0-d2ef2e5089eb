@@ -1,0 +1,68 @@
+{
+  "apiDefinition" : {
+    "info" : {
+      "version" : "1.0",
+      "title" : "devops-api"
+    },
+    "schemes" : [ ],
+    "security" : [ ],
+    "paths" : {
+      "/customer-api" : {
+        "get" : {
+          "responses" : { },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "scopes" : [ ],
+          "requestBody" : {
+            "content" : { },
+            "name" : "requestBody"
+          }
+        },
+        "scopes" : [ ],
+        "displayName" : "List Customer",
+        "enabled" : true
+      }
+    },
+    "securityDefinitions" : { },
+    "definitions" : { },
+    "parameters" : { },
+    "baseUriParameters" : [ ],
+    "externalDocs" : [ ],
+    "servers" : [ {
+      "url" : "http://demo4590421.mockable.io/customer/123",
+      "variables" : { }
+    } ],
+    "components" : {
+      "schemas" : { },
+      "responses" : { },
+      "parameters" : { },
+      "examples" : { },
+      "requestBodies" : { },
+      "headers" : { },
+      "links" : { },
+      "callbacks" : { }
+    },
+    "type" : "rest"
+  },
+  "nativeEndpoint" : [ {
+    "passSecurityHeaders" : true,
+    "uri" : "http://demo4590421.mockable.io/customer/123",
+    "connectionTimeoutDuration" : 0,
+    "alias" : false
+  } ],
+  "apiName" : "devops-api",
+  "apiVersion" : "1.0",
+  "maturityState" : "Beta",
+  "isActive" : true,
+  "type" : "REST",
+  "owner" : "Administrator",
+  "policies" : [ "8065c2a5-88cb-4a33-ac17-4db2bdadc9b8" ],
+  "tracingEnabled" : false,
+  "scopes" : [ ],
+  "publishedPortals" : [ ],
+  "creationDate" : "2021-09-17 18:45:26 GMT",
+  "systemVersion" : 1,
+  "gatewayEndpoints" : { },
+  "id" : "553cf8d9-f956-4f8c-81a0-d2ef2e5089eb"
+}

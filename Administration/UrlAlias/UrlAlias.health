@@ -1,0 +1,9 @@
+{
+  "id" : "health",
+  "alias" : "health",
+  "urlPath" : "invoke/wm.server.query:getServerHealth",
+  "portList" : [ ],
+  "association" : "1",
+  "apiId" : "URL_ALIAS_API_ID",
+  "package" : "WmRoot"
+}

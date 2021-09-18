@@ -1,0 +1,26 @@
+{
+  "id" : "8065c2a5-88cb-4a33-ac17-4db2bdadc9b8",
+  "names" : [ {
+    "value" : "Default Policy for API devops-api",
+    "locale" : "English"
+  } ],
+  "descriptions" : [ {
+    "value" : "",
+    "locale" : "English"
+  } ],
+  "policyEnforcements" : [ {
+    "enforcements" : [ {
+      "enforcementObjectId" : "c44e3516-f895-4324-9bff-525e79139d98"
+    } ],
+    "stageKey" : "transport"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "f5bdc7b5-cc89-468b-89fc-e4327bda5b0a"
+    } ],
+    "stageKey" : "routing"
+  } ],
+  "policyScope" : "SERVICE",
+  "active" : false,
+  "global" : false,
+  "systemPolicy" : false
+}
